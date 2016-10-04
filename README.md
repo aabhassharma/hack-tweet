@@ -3,7 +3,7 @@ This is a simple multi step experiment to see if I can get increased Twitter tra
 Here are the steps to collect the data:
 * Write a script that runs periodically, finds the most popular hashtags trending on Twitter
 * From the most popular hashtags, find the most popular tweets that meet some criteria related to those hashtags.
-* Save most popular tweet data to file
+* Save most popular tweet data to simple sqlite db
 
 Now that we have the data, here's the tweet part:
 * Use simple NLP to see if we can determine some sentiment about this text
@@ -15,4 +15,5 @@ Now that we have a file of neutral and/or positive data, multiple approaches we 
 * What I'm more excited for : Take the trending word, make a simple sentence from it using NLP, tweet that
 
 STATUS:
-We're almost done with the data collection parts! 
+- Creates DB to store trends and tweets
+- Finds trending tweets, stores to DB
