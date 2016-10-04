@@ -12,8 +12,9 @@ cursor.execute('''CREATE TABLE trend_and_tweet (
                id integer primary key autoincrement,
                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
                trend varchar(50),
+               tweet_id integer,
                tweet varchar(160))''')
-
+cursor.execute("CREATE UNIQUE INDEX tweet_id on trend_and_tweet (tweet_id)")
 # Committing changes and closing the connection to the database file
 conn.commit()
 conn.close()
