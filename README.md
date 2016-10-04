@@ -17,3 +17,19 @@ Now that we have a file of neutral and/or positive data, multiple approaches we 
 STATUS:
 - Creates DB to store trends and tweets
 - Finds trending tweets, stores to DB
+
+TODO:
+- Implement simple sentiment analysis with NLTK
+- Implement phrase based and tweet based analysis
+- Implement analysis on emojis
+- Create new table with tweet text, trend, sentiment, status id
+- Post/create tweets from postprocessing table
+
+Table Schema:
+trend_and_tweet
+===============
+id (integer) | timestamp (datetime) | trend (varchar) | tweet_id (integer) | tweet (varchar)
+
+analyzed_tweet
+===============
+id (integer) | trend_and_tweet_id (fk) | timestamp (datetime) | trend (varchar) | tweet_id (integer) | tweet (varchar) | sentiment (varchar)
