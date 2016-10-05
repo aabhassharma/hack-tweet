@@ -1,3 +1,4 @@
 set_env.sh
 *.pyc
 *.sqlite
+classifier.pickle
